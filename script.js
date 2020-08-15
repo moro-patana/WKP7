@@ -1,3 +1,4 @@
+// Create an array object
 const books = [
 	{
 		title: 'The fault in our star',
@@ -23,27 +24,29 @@ const books = [
 ]; 
 console.log(books);
 
-const addNewList = [];
+
+// Grab elements
 const postForm = document.querySelector(`.post-form`);
 const bookTitle = document.querySelector(`#title`);
 const bookAuthor = document.querySelector(`#author`);
 const bookGenre = document.querySelector(`#genre-select`);
 const bookPages = document.querySelector(`#pages`);
-const bookStatus = document.querySelector(`#staus-select`);
+const bookStatus = document.querySelector(`#status-select`);
 
 const table = document.getElementsByTagName(`table`);
 const tableHead = document.getElementsByTagName(`thead`);
 const tableBody = document.querySelector(`.table-body`);
-const tableRow = document.querySelector(`tr`);
+const tableRow = document.querySelector(`.list`);
 const addButton = document.querySelector(`.add`);
 
-
-const loadBookList = () => {
+//Make a copy of books oject
    let filteredBooks = [...books];
+
+// Map the copy of books object and create an html
    const html = filteredBooks
    .map(book => {
 	   return `
-	   <tr>
+	   <tr class="list">
 		 <td>${book.title}</td>
 		 <td>${book.author}</td>
 		 <td>${book.genre}</td>
@@ -57,16 +60,25 @@ const loadBookList = () => {
 	   </tr>
    `;
 })
+// Join them 
 	   .join(``);
 
 	   tableBody.innerHTML = html;
 
+const handleCheck = e => {
+	const inputCheckbox = document.querySelector(input[type="checkbox"]);
+	if (inputCheckbox.checked) {
+		book.read = true;
+	}
+}
+// Listen to the add button
  
-	   addButton.addEventListener(`click`, ($event) => {
+addButton.addEventListener(`click`, ($event) => {
 		$event.preventDefault();
+// Create new table row
 		const newRowHTML = 
 		`
-		<tr>
+		<tr class="list">
 			<td>${bookTitle.value}</td>
 			<td>${bookAuthor.value}</td>
 			<td>${bookGenre.value}</td>
@@ -75,19 +87,29 @@ const loadBookList = () => {
 			<input type="checkbox">
 			</td>
 			<td>
-			<button class="delete"><img src="https://bit.ly/3asZXGT" alt="delete icon"><span>Delete</span></button>
+			<button value="title" class="delete"><img src="https://bit.ly/3asZXGT" alt="delete icon"><span>Delete</span></button>
 			</td>
 		</tr>`;
 
-	
+// Insert it into the table body
 	tableBody.insertAdjacentHTML('beforeend', newRowHTML);
 	
 });  
-  
- 
-}
-loadBookList();
 
-// Event listeners
-// addButton.addEventListener(`click`, handleListClick);
+
+// Remove list
+ const deleteList = list => {
+	 list.remove();
+ }
+ const handleBtnClick = event => {
+	if (event.target.matches(`button.delete`)) {
+	  const list = event.target.closest(`.list`);
+	  deleteList(list);
+  
+  }
+  };
+   
+
+
+
 
