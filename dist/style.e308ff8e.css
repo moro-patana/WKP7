@@ -1,0 +1,46 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: auto;
+}
+img {
+    width: 30px;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: blue;
+}
+header > h1 {
+    color: white;
+    font-weight: 700;
+}
+.container {
+    background-color: skyblue;
+}
+.add-list {
+    background-color: wheat;
+    margin: 3rem;
+}
+.form-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 900px;
+    height: 80px;
+    padding: 2rem;
+}
+label {
+    font-size: 12px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.add-button {
+    padding-top: 1rem;
+}
+
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
