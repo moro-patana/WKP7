@@ -1,13 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="reset.css" />
-		<link rel="stylesheet" href="style.css" />
-		<title>WKP7</title>
-	</head>
-	<body>
-		<script src="script.js"></script>
-	</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>
+        Onja
+    </h1>
+    <div class="container">
+        <div class="col-8 offset-2">
+            <div class="card-body">
+                <h2>Library</h2>
+                <form action="" class="post-form">
+                    <h3>Add a book</h3>
+                    <div class="form-groups">
+                        <div class="form-group">
+                            <label for="title">Book Title</label><br>
+                            <input type="text" class="form-control" id="title" name="title"
+                                placeholder="Enter the title" />
+                        </div>
+                        <div class="form-group">
+                            <label for="author">Book Author</label><br>
+                            <input class="form-control" id="author" type="text" name="author" rows="3" placeholder="Author name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="genre">Genre</label><br>
+                            <select id="genre-select" name="genre">
+                                <option value="romance">Romance</option>
+                                <option value="science">Science</option>
+                                <option value="medicin">Medicin</option>
+                                <option value="magic">Magic</option>
+                                <option value="war">World war</option>
+                                <option value="animal">Animal</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pages">Pages</label><br>
+                            <input class="form-control" id="pages" type="text" name="pages" rows="3" placeholder="Book pages" />
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status</label><br>
+                            <select id="status-select" name="status">
+                                <option value="read">Read</option>
+                                <option value="unread">Unread</option>
+                            </select>
+                        </div>
+                        <button type="add" class="add">
+                            Add
+                        </button>
+                    </div>
+                </form>
+                <div class="wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Genre</th>
+                                <th>Pages</th>
+                                <th>Read</th>
+                                <th>&nbsp</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+  <script src="./script.js"></script>
+</body>
+
 </html>
