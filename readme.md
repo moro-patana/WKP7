@@ -1,35 +1,23 @@
-# WKP7 - Library
+# Report
 
-### Hey team!
+1. These are the steps which I structure my project:
+   1.1 Creating the books objects with three books inside.
 
-Hope you are ready for a new challenge. I have a nice one for you this week. We're going to build a library management application. The application will consist on a form to add a book, and a table listing all the books. After submitting the form, the new book will appear on the book table.
+   1.2 Grabing elements which are useful.
 
-### Here is the mockup of our library app.
+   1.3 Copy the books object (using spread operaator).
 
-![assets/wkp7-library.png](assets/wkp7-library.png)
+   1.4 Map through the object and create new html and then join them together.
 
-[You can also access the design through figma.](https://www.figma.com/file/FoD2jZb5oOGZvTUMop0nbA/WKP7?node-id=1%3A2)
+2. If I had more time, I would make the checkbox and the delete button work properly.
 
-### A book needs those attributes :
+3. Yes. I learnt something new while working on this project: 
 
--   A title
--   An author
--   A genre (Mystery, Thriller, Fiction, Non-fiction, Fantasy, Design, Memoirs...)
--   A number of pages
--   A status (Read or not)
+    **table**: I tried to use table in my new html with some rows and add the new book row every time I fill the input and click the button add. So started then, I know that we can add table row as much we want.
 
-### Requirements :
+4. For me, the most challenging part is the use of local storage and listen to a button with svg inside.
 
--   When users load the app for the first time, a list of 3 books minimum should already be present on the list. The list will always be generated dynamically with some state in the javascript.
--   Users should be able to change the read attribute status by clicking the checkbox (and the changes will be reflected in the app state)
--   Users should be able to delete a book from the list by clicking the trash icon (and reflect that in the app state as well)
--   When a user come back to the app with the same browser, they should see the same book list as it was, before they left the app. Save the current book list to your browser's _Local Storage_.
+5. Yes, please. If it is possible, I want more explanation about the topic.
 
-### Tips :
+6. Any way, It was so nice project and it is good to solve different problem in a project so that we learn new thing every time and I think we will be able to solve them next time.
 
--   Focus on the features first, and if you have some time left, try to replicate this design.
--   Start by choosing the book data structure, and create a few of them in the code.
--   Focus on your basic app functionality first, and then try to save the state of your app to _Local Storage_.
--   I suggest you to look back to the Shopping List exercise we did together (Video 57). There is a lot of similarities between the exercise and this project 😉
-
-### Good luck team 🙌
